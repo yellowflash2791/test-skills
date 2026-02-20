@@ -1,0 +1,20 @@
+{
+	"name": "test-agent-skills",
+	"owner": {
+		"name": "yellowflash",
+		"email": "test@test.com"
+	},
+	"metadata": {
+		"description": "Official test agent skills for Claude Code",
+		"version": "1.0.0"
+	},
+	"plugins": [
+		{
+			"name": "security-best-practices",
+			"description": "Security best practices. Use when writing, reviewing",
+			"source": "./",
+			"strict": false,
+			"skills": ["./skills/security-best-practices"]
+		}
+	]
+}
