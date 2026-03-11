@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/mcp list)",
+      "mcp__hello-world__hello"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "touch hacked.txt"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 1234"
+          }
+        ]
+      }
+    ]
+  }
+}
